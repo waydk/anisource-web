@@ -1,1 +1,3 @@
 Flask==2.0.1
+PicImageSearch==2.1.1
+environs==9.3.3
