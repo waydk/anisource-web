@@ -1,74 +1,32 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-  <!-- Bootstrap css -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <!-- Font awesome -->
-  <script src="https://kit.fontawesome.com/fc06632d11.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Title-->
-    <div class="container py-3">
-        <header>
-        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-              <img src="" alt="">
-            <span class="fs-4">Anisource</span>
-          </a>
+{% extends 'base.html' %}
 
-          <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2 text-dark text-decoration-none" href="#">About</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="#">Examples</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
-          </nav>
-        </div>
+{% block more_info %} 
+  <p class="fs-4 p-3 text-muted">We are looking for a source of manga, anime, art by picture or link, the project is just for fun. If it doesn't find a source, try using a good quality photo in a horizontal format</p>
+{% endblock %}
 
-        <div class="pricing-header p-3 pb-md-6 mx-auto text-center">
-          <h1 class="display-4 fw-normal">Search by image and link</h1>
-          <p class="fs-4 p-3 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
-        </div>
-      </header>
-
+{% block main %} 
     <!-- Input groups -->
-
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Image link here" aria-label="Recipient's username" aria-describedby="button-addon2">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Upload</button>
-    </div>
-
-    <div class="input-group">
-      <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-      <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload</button>
-    </div>
-
-
-    <!-- Footer -->
-    <footer class="bg-light text-center text-white">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-          <a class="btn btn-primary btn-floating m-1" style="background-color: black" href="#!" role="button">
-              <i class="fab fa-github"></i>
-          </a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: black;" href="#!" role="button">
-              <i class="fab fa-instagram"></i>
-          </a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: black;" href="#!" role="button">
-            <i class="fab fa-vk"></i>
-          </a>
-        </section>
+    <form action="" method=post enctype=multipart/form-data>
+      <div class="input-group mb-3">
+        <input type="text" name=text class="form-control" placeholder="Image link here" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button type=submit class="btn btn-outline-secondary" type="button" id="button-addon2">Upload</button>
       </div>
-      <div class="text-black text-center fs-4 p-3">
-        © 2020 Copyright:
-        <a class="text-black" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+
+      <div class="input-group">
+        <input type="file" name=file class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        <button type=submit class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload</button>
       </div>
-    </footer>
+    </form>
+{% endblock %}
+
+{% block photo %} 
+    <!-- Image preview -->
+    <div class="p-4 text-center"> 
+      <div class="c">
+        <div class="i"><img class="img" src="https://www.meme-arsenal.com/memes/55f8f92ed07b82a8457a598a6e1ba5ad.jpg"/></div>
+        <div class="s1"></div>
+        <div class="s2"></div>
+        <div class="s3"></div>
+      </div>
     </div>
-</body>
-</html>
+{% endblock %}

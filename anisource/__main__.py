@@ -35,24 +35,26 @@ def search(filename):
     saucenao = SauceNAO(api_key=api_key)
     res = saucenao.search(f"anisource/img/{filename}")
     try:
-        est_time = f"☁ Est Time: {res.origin['results'][0]['data']['est_time']}\n"
+        est_time = res.origin['results'][0]['data']['est_time']
     except KeyError:
-        est_time = ''
+        est_time = None
 
     try:
-        part = f"☁ Part: {res.origin['results'][0]['data']['part']}\n"
+        part = res.origin['results'][0]['data']['part']
     except KeyError:
-        part = ''
+        part = None
 
     res = res.raw[0]
-    author = f"☁ <h1> Author: {res.author}\n</h1>" if res.author else ''
-    message = f"☁ Title: {res.title}" \
-              f"☁ Similarity: {res.similarity}%" \
-              f"{author}" \
-              f"{est_time}" \
-              f"{part}" \
-              f"☁ Url: {res.url}"
-    return message
+    return render_template(
+        "search_image.html",
+        title=res.title,
+        est_time=est_time,
+        part=part,
+        author=res.author,
+        photo=res.thumbnail,
+        similarity=res.similarity
+    )
+
 
 if __name__ == '__main__':
     app.run(debug=True)

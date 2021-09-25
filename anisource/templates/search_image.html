@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block more_info %} 
+  <p class="fs-4 p-3 text-muted">We are looking for a source of manga, anime, art by picture or link, the project is just for fun. If it doesn't find a source, try using a good quality photo in a horizontal format</p>
+{% endblock %}
+
+{% block main %}
+    <h2 class="p-2 text-center"> Title: {{ title }}</p>
+   
+    {% if author %}
+        <h2 class="p-2 text-center"> Author: {{ author }}</p>
+    {% endif %}
+
+    {% if est_time %}
+        <h2 class="p-2 text-center"><i class="fas fa-video"></i> Est_time: {{ est_time }}</p>
+    {% endif %}
+
+    {% if part %}
+        <h2 class="p-2 text-center"> Part: {{ part }}</p>
+    {% endif %}
+
+    <h2 class="p-2 text-center"> Similarity: {{ similarity }} %</p>
+
+{% endblock %}
+
+{% block photo %} 
+    <!-- Image preview -->
+    <div class="p-4 text-center"> 
+      <div class="c">
+        <div class="i"><img class="img" src="{{ photo }}"></div>
+        <div class="s1"></div>
+        <div class="s2"></div>
+        <div class="s3"></div>
+      </div>
+    </div>
+{% endblock %}
