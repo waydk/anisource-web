@@ -99,3 +99,8 @@
     --x1: 0;
     --x2: 95%;
   }
+
+/* Inputs */
+input[type="file"] {
+  display: none;
+}

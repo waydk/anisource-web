@@ -8,20 +8,24 @@
     <!-- Input groups -->
     <form action="" method=post enctype=multipart/form-data>
       <div class="input-group mb-3">
-        <input type="text" name=text class="form-control" placeholder="Image link here" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button type=submit class="btn btn-outline-secondary" type="button" id="button-addon2">Upload</button>
+        <button  class="btn-choose-file btn btn-outline-secondary" type="button">
+          <label for="choose-file">
+            <i class="fas fa-images"></i> Choose image
+          </label>
+          <input id="choose-file" type="file" name=file class="form-control">
+        </button>
+        <input type="text" name=text class="form-control" placeholder="Image link here">
+        <button type="button" class="btn btn-outline-secondary"><i class="far fa-trash-alt"></i> Clear</button>
       </div>
-
-      <div class="input-group">
-        <input type="file" name=file class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-        <button type=submit class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload</button>
+      <div class="d-grid p-3">
+        <button type=submit class="btn btn-outline-secondary" type="button"><i class="fa fa-cloud-upload"></i> Upload</button>
       </div>
     </form>
 {% endblock %}
 
 {% block photo %} 
     <!-- Image preview -->
-    <div class="p-4 text-center"> 
+    <div class="p-2 text-center"> 
       <div class="c">
         <div class="i"><img class="img" src="https://www.meme-arsenal.com/memes/55f8f92ed07b82a8457a598a6e1ba5ad.jpg"/></div>
         <div class="s1"></div>
