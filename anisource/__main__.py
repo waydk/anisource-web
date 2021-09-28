@@ -57,11 +57,10 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('search_by_image',
                                     filename=filename))
-        elif text:
+        if text:
             bytes_text = base64.b64encode(text.encode("UTF-8"))
             decoded_text = bytes_text.decode("utf-8")
             return redirect(url_for('search_by_link', link=decoded_text))
-
     return render_template("index.html")
 
 @app.route('/search_image/<filename>')
@@ -76,4 +75,4 @@ def search_by_link(link):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
