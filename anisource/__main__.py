@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 import base64
 
 # SET YOUR FOLDER
-UPLOAD_FOLDER = '/home/waydk/python_projects/anisource-web/anisource/img'
+UPLOAD_FOLDER = 'anisource/img'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask(__name__)
