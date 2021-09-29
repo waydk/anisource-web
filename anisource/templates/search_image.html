@@ -1,36 +1,33 @@
 {% extends 'base.html' %}
 
-{% block more_info %} 
-  <p class="fs-4 p-3 text-muted">We are looking for a source of manga, anime, art by picture or link, the project is just for fun. If it doesn't find a source, try using a good quality photo in a horizontal format</p>
-{% endblock %}
-
 {% block main %}
-    <h2 class="p-2 text-center"> Title: {{ title }}</p>
-   
-    {% if author %}
-        <h2 class="p-2 text-center"> Author: {{ author }}</p>
-    {% endif %}
+    <div class="card" style="text-align:center;">
+      <div class="card-body">
+        <h3 class="card-title">{{ title }}</h3>
+      </div>
+      <ul class="list-group list-group-flush">
+        {% if author %}
+          <li class="list-group-item">Author: {{ author }}</li>
+        {% endif %}
 
-    {% if est_time %}
-        <h2 class="p-2 text-center"><i class="fas fa-video"></i> Est_time: {{ est_time }}</p>
-    {% endif %}
+        {% if est_time %}
+          <li class="list-group-item">Est time: {{ est_time }}</li>
+        {% endif %}
 
-    {% if part %}
-        <h2 class="p-2 text-center"> Part: {{ part }}</p>
-    {% endif %}
-
-    <h2 class="p-2 text-center"> Similarity: {{ similarity }} %</p>
-
+        {% if part %}
+          <li class="list-group-item">Part: {{ part }}</li>
+        {% endif %}
+        <li class="list-group-item">Similarity: {{ similarity }} %</li>
+      </ul>
+      <div class="card-body">
+        <a class="btn-example btn btn-outline-dark btn-lg" href="https://top.gg/bot/559247918280867848" role="button">Go to source</a>
+      </div>
+    </div>
 {% endblock %}
 
 {% block photo %} 
-  <video width="400" controls>
-    <source src="https://v.pinimg.com/videos/mc/720p/8a/f4/28/8af4288e3e7cb2b80b534715faed692e.mp4" type="video/mp4">
-    <source src="https://v.pinimg.com/videos/mc/720p/8a/f4/28/8af4288e3e7cb2b80b534715faed692e.mp4" type="video/ogg">
-    Your browser does not support HTML video.
-  </video>
     <!-- Image preview -->
-    <div class="p-4 text-center"> 
+    <div class="p-4"> 
       <div class="c">
         <div class="i"><img class="img" src="{{ photo }}"></div>
         <div class="s1"></div>

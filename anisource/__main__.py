@@ -73,6 +73,14 @@ def search_by_link(link):
     link = bytes_text.decode('utf-8')
     return saucenao_search(link=link)
 
+@app.route('/about')
+def show_about():
+    return render_template("about.html")
+
+@app.route('/examples')
+def show_examples():
+    return render_template("examples.html")
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

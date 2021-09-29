@@ -99,8 +99,42 @@
     --x1: 0;
     --x2: 95%;
   }
+/* Globals */
+body {
+  text-align: center;
+}
 
 /* Inputs */
 input[type="file"] {
   display: none;
+}
+
+/* About */
+.about-text {
+  text-align: left;
+  font-size: 30px;
+  color: #454545;
+  border: red;
+  border: 3px dotted;
+  text-align: center;
+  padding: 2%;
+}
+
+/* Example */
+.example-item {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Search */
+.card-title {
+  font-size: 30px;
+}
+
+.card-title {
+  color: #FF6363;
+}
+
+.list-group-item {
+  font-size: 25px;
 }

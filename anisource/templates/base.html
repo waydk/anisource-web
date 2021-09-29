@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- Title-->
-    <div class="container py-3">
+  <div class="container py-3">
         <header>
         <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
           <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
@@ -25,9 +25,8 @@
           </a>
 
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2 text-dark text-decoration-none" href="#">About</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="#">Examples</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="{{ url_for('show_about') }}">About</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="{{ url_for('show_examples') }}">Examples</a>
           </nav>
         </div>
 
@@ -48,16 +47,16 @@
       <div class="container p-4 pb-0">
         <!-- Section: Social media -->
         <section class="mb-4">
-          <a class="btn btn-primary btn-floating m-1" style="background-color: black" href="#!" role="button">
+          <a class="btn btn-dark btn-floating m-1" href="#!" role="button">
               <i class="fab fa-github"></i>
           </a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: black;" href="#!" role="button">
+          <a class="btn btn-dark btn-floating m-1"  href="#!" role="button">
               <i class="fab fa-instagram"></i>
           </a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: black;" href="#!" role="button">
+          <a class="btn btn-dark btn-floating m-1" href="#!" role="button">
             <i class="fab fa-vk"></i>
           </a>
-          <a class="btn btn-primary btn-floating m-1" style="background-color: black;" href="#!" role="button">
+          <a class="btn btn-dark btn-floating m-1" href="#!" role="button">
             <i class="fab fa-telegram"></i>
           </a>
         </section>
@@ -69,6 +68,6 @@
         </p>
       </div>
     </footer>
-    </div>
+  </div>
 </body>
 </html>
