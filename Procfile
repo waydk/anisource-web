@@ -1,1 +1,2 @@
-web: gunicorn app:anicource
+web: gunicorn anicource:app
+init: FLASK_APP=run.py
