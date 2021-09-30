@@ -19,8 +19,11 @@
         {% endif %}
         <li class="list-group-item">Similarity: {{ similarity }} %</li>
       </ul>
-      <div class="card-body">
-        <a class="btn-example btn btn-outline-dark btn-lg" href="https://top.gg/bot/559247918280867848" role="button">Go to source</a>
+      <div class="card-body">        
+        {% if url %}
+          <a class="btn-example btn btn-outline-dark btn-lg" href="{{ url }}" role="button">Go to source</a>
+        {% endif %}
+       
       </div>
     </div>
 {% endblock %}

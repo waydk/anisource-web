@@ -6,14 +6,26 @@
 
 {% block main %} 
     <!-- Input groups -->
-    <form action="" method=post enctype=multipart/form-data>
+    <form id="file-upload-form" class="uploader" action="" method=post enctype=multipart/form-data>
+        <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
+        <label for="file-upload" id="file-drag">
+          <img id="file-image" src="#" alt="Preview" class="hidden">
+          <div id="start">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            <div>Select a file or drag here</div>
+            <div id="notimage" class="hidden">Please select an image</div>
+            <span id="file-upload-btn" class="btn btn-dark">Select a file</span>
+          </div>
+          <div id="response" class="hidden">
+            <div id="messages"></div>
+            <progress class="progress" id="file-progress" value="0">
+              <span>0</span>%
+            </progress>
+          </div>
+        </label>
+
       <div class="input-group mb-3">
-        <button  class="btn-choose-file btn btn-outline-secondary" type="button">
-          <label for="choose-file">
-            <i class="fas fa-images"></i> Choose image
-          </label>
-          <input id="choose-file" type="file" name=file class="form-control">
-        </button>
+
         <input id="search_link" type="text" name=text class="form-control" placeholder="Image link here">
         <button onclick="document.getElementById('search_link').value = ''" type="button" class="btn btn-outline-secondary"><i class="far fa-trash-alt"></i> Clear</button>
       </div>

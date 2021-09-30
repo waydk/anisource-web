@@ -24,15 +24,18 @@ def saucenao_search(filename=None, link=None):
         res = saucenao.search(link)
     try:
         est_time = res.origin['results'][0]['data']['est_time']
-    except KeyError:
+    except (KeyError, AttributeError):
         est_time = None
 
     try:
         part = res.origin['results'][0]['data']['part']
-    except KeyError:
+    except (KeyError, AttributeError):
         part = None
 
-    res = res.raw[0]
+    try:
+        res = res.raw[0]
+    except AttributeError:
+        return render_template("error.html", error="Not found")
     return render_template(
         "search_image.html",
         title=res.title,
@@ -40,7 +43,8 @@ def saucenao_search(filename=None, link=None):
         part=part,
         author=res.author,
         photo=res.thumbnail,
-        similarity=res.similarity
+        similarity=res.similarity,
+        url=res.url
     )
 
 def allowed_file(filename):
@@ -51,7 +55,7 @@ def allowed_file(filename):
 def upload_file():
     if request.method == 'POST':
         text = request.form['text']
-        file = request.files['file']
+        file = request.files['fileUpload']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
@@ -81,6 +85,11 @@ def show_about():
 def show_examples():
     return render_template("examples.html")
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('error.html', error=e), 404
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
