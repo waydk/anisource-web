@@ -2,6 +2,9 @@
 *Website made with flask and bootstrap*
 
 [![CodeFactor](https://www.codefactor.io/repository/github/waydk/anisource-web/badge)](https://www.codefactor.io/repository/github/waydk/anisource-web)
+
+<img src="https://telegra.ph/file/be4b5f83d6bba4c67015d.png" alt="anisource" width=600px>
+
 ## Development
 ### System dependencies
 * Python 3.8
