@@ -7,8 +7,7 @@ function ekUpload(){
       console.log("Upload Initialised");
   
       var fileSelect    = document.getElementById('file-upload'),
-          fileDrag      = document.getElementById('file-drag'),
-          submitButton  = document.getElementById('submit-button');
+          fileDrag      = document.getElementById('file-drag');
   
       fileSelect.addEventListener('change', fileSelectHandler, false);
   
@@ -100,7 +99,6 @@ function ekUpload(){
     function uploadFile(file) {
   
       var xhr = new XMLHttpRequest(),
-        fileInput = document.getElementById('class-roster-file'),
         pBar = document.getElementById('file-progress'),
         fileSizeLimit = 1024; // In MB
       if (xhr.upload) {
@@ -112,7 +110,7 @@ function ekUpload(){
           xhr.upload.addEventListener('progress', updateFileProgress, false);
   
           // File received / failed
-          xhr.onreadystatechange = function(e) {
+          xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
               // Everything is good!
   

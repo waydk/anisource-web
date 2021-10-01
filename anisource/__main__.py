@@ -54,7 +54,8 @@ def allowed_file(filename):
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
-        text = request.form['text']
+        if request.form['text']:
+            text = request.form['text']
         file = request.files['fileUpload']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
