@@ -1,5 +1,10 @@
-/* Image animation */
+/* Globals */
+body {
+  text-align: center;
+}
 
+
+/* Image animation */
 .c {
     position: relative;
     width: 60vmin;
@@ -99,10 +104,6 @@
     --x1: 0;
     --x2: 95%;
   }
-/* Globals */
-body {
-  text-align: center;
-}
 
 /* Inputs */
 input[type="file"] {
@@ -122,6 +123,10 @@ input[type="file"] {
 /* Example */
 .example-item {
   padding-bottom: 10px;
+}
+
+.example-img {
+  width: 50%;
 }
 
 /* Search */
