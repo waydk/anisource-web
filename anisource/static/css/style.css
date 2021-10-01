@@ -198,7 +198,7 @@ input[type="file"] {
 }
 .uploader #file-image {
   display: inline;
-  margin: 0 auto 0.5rem auto;
+  margin: 0 auto 0.5rem;
   width: auto;
   height: auto;
   max-width: 180px;
@@ -244,12 +244,12 @@ input[type="file"] {
   display: none;
 }
 .uploader div {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   color: #21252e;
 }
 .uploader .btn {
   display: inline-block;
-  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  margin: 0.5rem 0.5rem 1rem;
   clear: both;
   font-family: inherit;
   font-weight: 700;

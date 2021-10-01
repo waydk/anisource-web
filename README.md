@@ -11,4 +11,4 @@
 ### Setup environment
 * Create .env and set [SAUCE_API](https://saucenao.com/user.php?page=search-api)
 ### Launch
-* <code>python3 -m anisource</code>
+* <code>python3 run.py</code>
