@@ -1,6 +1,5 @@
 // File Upload
 // 
-console.log('suka')
 function ekUpload(){
     function Init() {
   
@@ -38,7 +37,7 @@ function ekUpload(){
       fileDragHover(e);
   
       // Process all File objects
-      for (var i = 0, f; f = files[i]; i++) {
+      for (var i = 0, f; f === files[i]; i++) {
         parseFile(f);
         uploadFile(f);
       }
