@@ -110,6 +110,10 @@ input[type="file"] {
   display: none;
 }
 
+.input-group {
+  padding-top: 20px;
+}
+
 /* About */
 .about-text {
   text-align: left;
@@ -244,26 +248,4 @@ input[type="file"] {
 .uploader div {
   margin: 0 0 0.5rem;
   color: #21252e;
-}
-.uploader .btn {
-  display: inline-block;
-  margin: 0.5rem 0.5rem 1rem;
-  clear: both;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  text-transform: initial;
-  border: none;
-  border-radius: 0.2rem;
-  outline: none;
-  padding: 0 1rem;
-  height: 36px;
-  line-height: 36px;
-  color: #fff;
-  transition: all 0.2s ease-in-out;
-  box-sizing: border-box;
-  background: #2e2e2e;
-  border-color: #2e2e2e;
-  cursor: pointer;
 }

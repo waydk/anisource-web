@@ -24,12 +24,13 @@
           </div>
         </label>
 
-      <div class="input-group mb-3">
+        <div class="input-group">
+          <input class="form-control" type="text" id="search_link" name=text placeholder="Image link here">
+          <button onclick="document.getElementById('search_link').value = ''" type="button" class="clear btn btn-outline-secondary btn-sm"><i class="far fa-trash-alt"></i> Clear</button>
+        </div>
 
-        <input id="search_link" type="text" name=text class="form-control" placeholder="Image link here">
-        <button onclick="document.getElementById('search_link').value = ''" type="button" class="btn btn-outline-secondary"><i class="far fa-trash-alt"></i> Clear</button>
-      </div>
-      <div class="d-grid p-3">
+
+      <div class="d-grid p-3">s
         <button type=submit class="btn btn-outline-secondary" type="button"><i class="fa fa-cloud-upload"></i> Upload</button>
       </div>
     </form>
