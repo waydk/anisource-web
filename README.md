@@ -12,6 +12,9 @@
 * PicImageSearch 2.1.1
 * environs 9.3.3
 ### Setup environment
-* Create .env and set [SAUCE_API](https://saucenao.com/user.php?page=search-api)
+* <code>rename .env.example -> .env and set [SAUCE_API](https://saucenao.com/user.php?page=search-api) </code>
 ### Launch
+* <code>git clone https://github.com/waydk/anisource-web</code>
+* <code>cd anisource-web</code>
+* <code>pip3 install -r requirements.txt</code>
 * <code>python3 run.py</code>
