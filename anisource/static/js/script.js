@@ -37,7 +37,8 @@ function ekUpload(){
       fileDragHover(e);
   
       // Process all File objects
-      for (var i = 0, f; f = files[i]; i += 1) {
+      for (var i = 0, f; files[i]; i += 1) {
+        f = files[i]
         parseFile(f);
         uploadFile(f);
       }
