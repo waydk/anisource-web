@@ -54,9 +54,11 @@ def allowed_file(filename):
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
-        if request.form['text']:
+        file, text = None, None
+        if 'text' in request.form:
             text = request.form['text']
-        file = request.files['fileUpload']
+        if 'fileUpload' in request.files:
+            file = request.files['fileUpload']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
@@ -93,4 +95,4 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
