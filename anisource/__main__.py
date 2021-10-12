@@ -20,6 +20,7 @@ def saucenao_search(filename=None, link=None):
     saucenao = SauceNAO(api_key=api_key)
     if filename:
         res = saucenao.search(f"anisource/img/{filename}")
+        os.remove(f"anisource/img/{filename}")
     else:
         res = saucenao.search(link)
     try:
